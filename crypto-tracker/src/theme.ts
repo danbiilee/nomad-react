@@ -4,7 +4,7 @@ export const darkTheme: DefaultTheme = {
   bgColor: "#2C3A47",
   textColor: "white",
   accentColor: "#9c88ff",
-  cardBgColor: "#222",
+  cardBgColor: "rgba(0, 0, 0, 0.5)",
 };
 
 export const lightTheme: DefaultTheme = {
