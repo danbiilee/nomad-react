@@ -1,8 +1,8 @@
-import { Helmet } from 'react-helmet';
-import { useQuery } from 'react-query';
-import { Link } from 'react-router-dom';
-import styled from 'styled-components';
-import { fetchCoins } from '../api';
+import { Helmet } from "react-helmet";
+import { useQuery } from "react-query";
+import { Link } from "react-router-dom";
+import styled from "styled-components";
+import { fetchCoins } from "../api";
 
 const Container = styled.div`
   max-width: 480px;
@@ -26,9 +26,9 @@ const CoinsList = styled.ul``;
 
 const Coin = styled.li`
   margin-bottom: 10px;
-  background-color: ${(props) => props.theme.textColor};
+  background-color: ${(props) => props.theme.cardBgColor};
   border-radius: 15px;
-  color: ${(props) => props.theme.bgColor};
+  color: ${(props) => props.theme.textColor};
   a {
     display: flex;
     align-items: center;
@@ -64,7 +64,7 @@ interface ICoin {
 }
 
 function Coins() {
-  const { isLoading, data } = useQuery<ICoin[]>('allCoins', fetchCoins);
+  const { isLoading, data } = useQuery<ICoin[]>("allCoins", fetchCoins);
 
   /*   const [coins, setCoins] = useState<ICoin[]>([]);
   const [loading, setLoading] = useState(true);
